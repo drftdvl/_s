@@ -46,14 +46,17 @@
 	</header>
 -->
 	<div id="content" class="site-content">
-	<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo right">Logo</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-    </div>
-  </nav>
-	</div>
+	<!-- <div class="container"> -->
+	<nav class="purple darken-2">
+		<div class="brand-logo center">
+		    <div class="nav-wrapper">
+			      <ul id="nav-mobile" class="center hide-on-med-and-down">
+			      	<li><a href="<?php get_home_url(); ?>" style="color: #ffffff;">Home</a></li>
+			      	<li><a href="<?php get_home_url(); ?> /box/about" style="color: #ffffff;">About Us</a></li>
+			      	<li><a href="<?php get_home_url(); ?> /box/feature" style="color: #ffffff;">Feature</a></li>
+			      	<li><a href="<?php get_home_url(); ?> /box/tracker" style="color: #ffffff;">Tracker</a></li>
+			      </ul>
+		    </div>
+		</div>
+	</nav>
+	<!-- </div> -->
