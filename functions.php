@@ -114,6 +114,22 @@ function _s_scripts() {
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
+function addScripts() {
+	wp_register_script('materialize', get_stylesheet_directory_uri() . 'js/materialize.js');
+	wp_enqueue_script('materialize');
+	wp_register_script('jQuery', get_stylesheet_directory_uri() . 'js/jquery-3.1.1.min.js');
+	wp_enqueue_script('jQuery');
+}
+add_action('wp_enqueue_scripts', 'addScripts');
+
+function addStylesheet() {
+	wp_register_style('style', get_template_directory_uri() . 'style.css');
+	wp_enqueue_style('style');
+	wp_register_style('materialize', get_template_directory_uri() . 'css/materialize.css');
+	wp_enqueue_style('materialize');
+}
+add_action('wp_enqueue_scripts', 'addStylesheet');
+
 /**
  * Implement the Custom Header feature.
  */
