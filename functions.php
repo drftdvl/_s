@@ -115,10 +115,10 @@ function _s_scripts() {
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
 function addScripts() {
-	wp_register_script('materialize', get_stylesheet_directory_uri() . 'js/materialize.js');
-	wp_enqueue_script('materialize');
 	wp_register_script('jQuery', get_stylesheet_directory_uri() . 'js/jquery-3.1.1.min.js');
 	wp_enqueue_script('jQuery');
+	wp_register_script('materialize', get_stylesheet_directory_uri() . 'js/materialize.js');
+	wp_enqueue_script('materialize');
 }
 add_action('wp_enqueue_scripts', 'addScripts');
 
