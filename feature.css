@@ -1,0 +1,23 @@
+@font-face {
+    font-family: PlayfairBlackItalic;
+	font-weight: lighter;
+    src: url(PlayfairDisplay-BlackItalic.otf); ********
+}
+
+.center {
+    margin: auto;
+   
+	}
+.malaki
+{
+
+width: 500px;
+font-family: PlayfairBlackItalic;
+font-size: 25px;
+border-style: hidden hidden solid hidden;
+border-width: 6px;
+
+color: #000000;
+text-align : center;
+border-bottom-color:#660066;
+}
