@@ -8,20 +8,20 @@
 @font-face
 {
 font-family: PlayFairBlackItalic;
-src: url(PlayFairDisplay-BlackItalic.otf)
+src: url(fonts/PlayFairDisplay-BlackItalic.otf)
 }
 
 @font-face
 {
 	
 font-family: QuickSandBold;
-src: url(Quicksand-Bold.otf);
+src: url(fonts/Quicksand-Bold.otf);
 }
 
 @font-face
 {
 font-family:QuickSandRegular;
-src: url(Quicksand-regular.otf);
+src: url(fonts/Quicksand-regular.otf);
 }
 
 h1
