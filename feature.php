@@ -7,21 +7,20 @@
 <style>
 @font-face
 {
-font-family: PlayFairBlackItalic;
-src: url(fonts/PlayFairDisplay-BlackItalic.otf)
+	font-family: PlayFairBlackItalic;
+	src: url('/box/wp-content/themes/_s/fonts/PlayFairDisplay-BlackItalic.otf');
 }
 
 @font-face
 {
-	
-font-family: QuickSandBold;
-src: url(fonts/Quicksand-Bold.otf);
+	font-family: QuickSandBold;
+	src: url('/box/wp-content/themes/_s/fonts/Quicksand-Bold.otf');
 }
 
 @font-face
 {
-font-family:QuickSandRegular;
-src: url(fonts/Quicksand-regular.otf);
+	font-family:QuickSandRegular;
+	src: url('/box/wp-content/themes/_s/fonts/Quicksand-regular.otf');
 }
 
 h1
@@ -31,7 +30,7 @@ h1
 	border-width:6px;
 	border-color:#660066;
 	width: 500px;
-	font-family:PlayFairBlackItalic;
+	font-family: PlayFairBlackItalic;
 	text-align: center;
 	font-size: 55px;
 	padding-bottom: 10px;
