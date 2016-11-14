@@ -19,6 +19,15 @@
 <?php wp_head(); ?>
 </head>
 
+<style>
+@font-face
+{
+	font-family: Aleo;
+	font-size: 23px;
+	src: url('/box/wp-content/themes/_s/fonts/Aleo-Regular.otf');
+}
+</style>
+
 <body <?php body_class(); ?>>
 <!-- <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
@@ -45,18 +54,36 @@
 		</nav>
 	</header>
 -->
+
+	<?php if (is_page('home')): ?>
+	<div id="content" class="site-content">
+	<!-- <div class="container"> -->
+	<nav class="N/A">
+		<div class="brand-logo center">
+		    <div class="nav-wrapper">
+			      <ul id="nav-mobile" class="center hide-on-med-and-down">
+			      	<li><a href="<?php get_home_url(); ?> /box" style="color: #ffffff; font-family: Aleo">HOME</a></li>
+			      	<li><a href="<?php get_home_url(); ?> /box/about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
+			      	<li><a href="<?php get_home_url(); ?> /box/feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
+			      	<li><a href="<?php get_home_url(); ?> /box/tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
+			      </ul>
+		    </div>
+		</div>
+	</nav>
+	<?php else: ?>
 	<div id="content" class="site-content">
 	<!-- <div class="container"> -->
 	<nav class="purple darken-2">
 		<div class="brand-logo center">
 		    <div class="nav-wrapper">
 			      <ul id="nav-mobile" class="center hide-on-med-and-down">
-			      	<li><a href="<?php get_home_url(); ?>" style="color: #ffffff;">Home</a></li>
-			      	<li><a href="<?php get_home_url(); ?> /box/about" style="color: #ffffff;">About Us</a></li>
-			      	<li><a href="<?php get_home_url(); ?> /box/feature" style="color: #ffffff;">Feature</a></li>
-			      	<li><a href="<?php get_home_url(); ?> /box/tracker" style="color: #ffffff;">Tracker</a></li>
+			      	<li><a href="<?php get_home_url(); ?> /box" style="color: #ffffff; font-family: Aleo">HOME</a></li>
+			      	<li><a href="<?php get_home_url(); ?> /box/about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
+			      	<li><a href="<?php get_home_url(); ?> /box/feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
+			      	<li><a href="<?php get_home_url(); ?> /box/tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
 			      </ul>
 		    </div>
 		</div>
 	</nav>
+	<?php endif; ?>
 	<!-- </div> -->
