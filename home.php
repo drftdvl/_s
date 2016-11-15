@@ -23,6 +23,11 @@
 	font-family:QuickSandRegular;
 	src: url('/box/wp-content/themes/_s/fonts/Quicksand-regular.otf');
 }
+@font-face
+{
+	font-family:Aleo-Regular;
+	src: url('/box/wp-content/themes/_s/fonts/Aleo-Regular.otf');
+}
 
 body
 {
@@ -32,19 +37,49 @@ body
 .bioOrg
 {
 	border-style: hidden;
-	border-top: : 0px;
 	font-family: PlayFairBlackItalic;
 	color: white;
 	font-size:48px;
+	padding-top: 0px;
 }
+.eX
+{
+	border-style: hidden;
+	font-family:Aleo-Regular;
+	color: white;
+	font-size: 36px;
+}
+
+.par
+{
+	border-style: hidden;
+	font-family:Aleo-Regular;
+	color: white;
+	font-size: 16px;
+	text-align: justify-all;
+	opacity: 2;
+}
+
 </style>
 <body>
 	<center>
 	<div>
-			<img src="/box/wp-content/themes/_s/BOx.Logo.W.png" alt = "Ateneo BOx:eXplore. eXperience. eXcel" style="width:240px;height:130px;margin-top:160px;">
-			<p class = "bioOrg">Ateneo Biological Organization</p>
-
+			<img src="/box/wp-content/themes/_s/BOx.Logo.W.png" alt = "Ateneo BOx:eXplore. eXperience. eXcel" style="width:240px;height:130px;margin-top:160px;padding-bottom: 0px;">
+			<br>
+			<strong class = "bioOrg">Ateneo Biological Organization</strong>
+			<br>
+			<strong class = "eX">eXplore.eXperience.eXcel</strong>
 	</div>
+	<br>
+	<div class="row">
+        <div class="col s12 m10">
+          <div class="card-panel black" style="opacity:0.5;margin-left:160px;" >
+              <p class="par" style="opacity:2;">We, the Ateneo Biological Organization, being the premier Ateneo organization dedicated to the biological sciences, envision ourselves as competent and conscientious leaders of advocacy and action in biodiversity, bioeducation, and animal welfare for the Philippines <br><br>
+              BOx aims to form individuals who are guided by Ignation spirituality and sense of service as they eXplore issues concerning the diversity of life;eXperience social transformation through active involvement and concrete action; and eXcel as leaders in nation-building through their chosen endeavors</p>
+          </div>
+        </div>
+      </div>
+            
 	</center>
 </body>
 <?php
