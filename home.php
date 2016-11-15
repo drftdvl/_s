@@ -1,6 +1,6 @@
 <?php
 	get_header();
-	/* Template Name: Feature */
+	/* Template Name: Home */
 ?>
 <!DOCTYPE HTML>
 <html>
