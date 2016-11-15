@@ -73,7 +73,7 @@
 	<?php else: ?>
 	<div id="content" class="site-content">
 	<!-- <div class="container"> -->
-	<nav class="purple darken-2">
+	<nav class="transparent">
 		<div class="brand-logo center">
 		    <div class="nav-wrapper">
 			      <ul id="nav-mobile" class="center hide-on-med-and-down">
