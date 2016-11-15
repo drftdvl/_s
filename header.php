@@ -58,7 +58,7 @@
 	<?php if (is_page('home')): ?>
 	<div id="content" class="site-content">
 	<!-- <div class="container"> -->
-	<nav class="transparent">
+	<nav class="black" style="opacity: 0.5;">
 		<div class="brand-logo center">
 		    <div class="nav-wrapper">
 			      <ul id="nav-mobile" class="center hide-on-med-and-down">
