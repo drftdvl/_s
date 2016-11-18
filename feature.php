@@ -29,7 +29,7 @@ h1
 	border-style: hidden hidden solid hidden;
 	border-width:6px;
 	border-color:#660066;
-	width: 500px;
+	width: 600px;
 	font-family: PlayFairBlackItalic;
 	text-align: center;
 	font-size: 55px;
@@ -43,7 +43,7 @@ h1
 	width : 430px;
 	font-family: QuickSandBold;
 	color: white;
-	font-size:23px;
+	font-size:20px;
 	text-align:center;
 	background: #4f0b7c;
 	margin-bottom:10px;
