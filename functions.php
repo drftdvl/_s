@@ -130,6 +130,86 @@ function addStylesheet() {
 }
 add_action('wp_enqueue_scripts', 'addStylesheet');
 
+add_action('wp_head','my_ajaxurl');
+function my_ajaxurl() {
+	$html = '<script type="text/javascript">';
+	$html .= 'var ajaxurl = "' . admin_url( 'admin-ajax.php' ) . '"';
+	$html .= '</script>';
+	echo $html;
+}
+
+add_action('wp_ajax_update_user', 'update_user_ajax');
+function update_user_ajax(){
+	$id = $_POST['id'];
+	$bscp = $_POST['bscp'];
+	$fp = $_POST['fp'];
+	$ap = $_POST['ap'];
+	$tdw = $_POST['tdw'];
+	$core = $_POST['core'];
+	$email = $_POST['email'];
+	$first_name = $_POST['first_name'];
+	$last_name = $_POST['last_name'];
+	$nickname = $_POST['nickname'];
+	$user = get_user_by('login', $id);
+	if ($user == false){
+		$userdata = array(
+		    'user_login'  =>  $id,
+		    'user_email'    =>  $email,
+		    'user_pass'   =>  $id,  // When creating an user, `user_pass` is expected.
+			'first_name' => $first_name,
+			'last_name' => $last_name
+		);
+		wp_insert_user( $userdata );
+
+
+	} else {
+		if (get_user_meta($user->ID, 'bscp', true) == ''){
+			add_user_meta($user->ID, 'bscp', $bscp, true);
+		} else {
+			update_user_meta($user->ID, 'bscp', $bscp);
+		}
+		if (get_user_meta($user->ID, 'fp', true) == ''){
+			add_user_meta($user->ID, 'fp', $fp, true);
+		} else {
+			update_user_meta($user->ID, 'fp', $fp);
+		}
+		if (get_user_meta($user->ID, 'ap', true) == ''){
+			add_user_meta($user->ID, 'ap', $ap, true);
+		} else {
+			update_user_meta($user->ID, 'ap', $ap);
+		}
+		if (get_user_meta($user->ID, 'tdw', true) == ''){
+			add_user_meta($user->ID, 'tdw', $tdw, true);
+		} else {
+			update_user_meta($user->ID, 'tdw', $tdw);
+		}
+		if (get_user_meta($user->ID, 'core', true) == ''){
+			add_user_meta($user->ID, 'core', $core, true);
+		} else {
+			update_user_meta($user->ID, 'core', $core);
+		}
+		if (get_user_meta($user->ID, 'nickname', true) == ''){
+			add_user_meta($user->ID, 'nickname', $nickname, true);
+		}
+		else {
+			update_user_meta($user->ID, 'nickname', $nickname);
+		}
+		if (get_user_meta($user->ID, 'first_name', true) == ''){
+			add_user_meta($user->ID, 'first_name', $first_name, true);
+		} 
+		else {
+			update_user_meta($user->ID, 'first_name', $first_name);
+		}
+		if (get_user_meta($user->ID, 'last_name', true) == ''){
+			add_user_meta($user->ID, 'last_name', $last_name, true);
+		} 
+		else {
+			update_user_meta($user->ID, 'last_name', $last_name);
+		}
+	}
+	die();
+}
+
 /**
  * Implement the Custom Header feature.
  */
