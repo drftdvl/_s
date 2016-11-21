@@ -55,35 +55,39 @@
 	</header>
 -->
 
-	<?php if (is_page('home')): ?>
+	<?php if (is_home()): ?>
 	<div id="content" class="site-content">
 	<!-- <div class="container"> -->
-	<nav class="black" style="opacity: 0.5;">
-		<div class="brand-logo center">
-		    <div class="nav-wrapper">
-			      <ul id="nav-mobile" class="center hide-on-med-and-down">
-			      	<li><a href="<?php get_home_url(); ?> /box" style="color: #ffffff; font-family: Aleo">HOME</a></li>
-			      	<li><a href="<?php get_home_url(); ?> /box/about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
-			      	<li><a href="<?php get_home_url(); ?> /box/feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
-			      	<li><a href="<?php get_home_url(); ?> /box/tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
-			      </ul>
-		    </div>
-		</div>
-	</nav>
+	<div class="navbar-fixed">
+		<nav class="black" style="opacity: 0.5;">
+			<div class="brand-logo center">
+			    <div class="nav-wrapper">
+				      <ul id="nav-mobile" class="center hide-on-med-and-down">
+				      	<li><a href="<?php get_home_url(); ?> /box" style="color: #ffffff; font-family: Aleo">HOME</a></li>
+				      	<li><a href="<?php get_home_url(); ?> /box/about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
+				      	<li><a href="<?php get_home_url(); ?> /box/feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
+				      	<li><a href="<?php get_home_url(); ?> /box/tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
+				      </ul>
+			    </div>
+			</div>
+		</nav>
+	</div>
 	<?php else: ?>
 	<div id="content" class="site-content">
 	<!-- <div class="container"> -->
-	<nav class="transparent">
-		<div class="brand-logo center">
-		    <div class="nav-wrapper">
-			      <ul id="nav-mobile" class="center hide-on-med-and-down">
-			      	<li><a href="<?php get_home_url(); ?> /box" style="color: #ffffff; font-family: Aleo">HOME</a></li>
-			      	<li><a href="<?php get_home_url(); ?> /box/about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
-			      	<li><a href="<?php get_home_url(); ?> /box/feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
-			      	<li><a href="<?php get_home_url(); ?> /box/tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
-			      </ul>
-		    </div>
-		</div>
-	</nav>
+	<div class="navbar-fixed">
+		<nav class="transparent">
+			<div class="brand-logo center">
+			    <div class="nav-wrapper">
+				      <ul id="nav-mobile" class="center hide-on-med-and-down">
+				      	<li><a href="<?php get_home_url(); ?> /box" style="color: #ffffff; font-family: Aleo">HOME</a></li>
+				      	<li><a href="<?php get_home_url(); ?> /box/about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
+				      	<li><a href="<?php get_home_url(); ?> /box/feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
+				      	<li><a href="<?php get_home_url(); ?> /box/tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
+				      </ul>
+			    </div>
+			</div>
+		</nav>
+	</div>
 	<?php endif; ?>
 	<!-- </div> -->
