@@ -115,8 +115,7 @@ h1
 			        users[user]["bscp"] + "&ap=" +  users[user]["ap"] +
 			       "&fp=" +  users[user]["fp"] + "&tdw=" + 
 			        users[user]["tdw"] + "&core=" +  users[user]["core"] + "&first_name=" +
-			        users[user]["first_name"] + "&last_name=" + users[user]["last_name"] + "&email=" + users[user]["email"] + 
-			        "&nickname=" + users[user]["nickname"] + "&course=" + users[user]["course"] + "&ga=" + users[user]["ga"];
+			        users[user]["first_name"] + "&last_name=" + users[user]["last_name"] + "&email=" + users[user]["email"] + "&nickname=" + users[user]["nickname"] + "&course=" + users[user]["course"] + "&ga=" + users[user]["ga"];
 			        console.log(query);
 				jQuery.ajax({
 			       type: "POST",

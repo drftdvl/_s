@@ -163,7 +163,12 @@ function update_user_ajax(){
 			'course' => $course,
 			'id_number' => $id_number,
 			'core' => $core,
-			'ga' => $ga
+			'ga' => $ga,
+			'bscp' => $bscp,
+			'fp' => $ap,
+			'ap' => $ap,
+			'tdw' => $tdw,
+			'email' => $email
 		);
 		wp_insert_user( $userdata );
 
