@@ -64,7 +64,7 @@ body
 <body>
 	<center>
 	<div>
-			<img src="/box/wp-content/themes/_s/BOx.Logo.W.png" alt = "Ateneo BOx:eXplore. eXperience. eXcel" style="width:240px;height:130px;margin-top:160px;padding-bottom: 0px;">
+			<img src="/box/wp-content/themes/_s/BOx.Logo.W.png" alt = "Ateneo BOx:eXplore. eXperience. eXcel" style="width:240px;height:130px;margin-top:10px;padding-bottom: 0px;">
 			<br>
 			<strong class = "bioOrg">Ateneo Biological Organization</strong>
 			<br>
@@ -85,4 +85,3 @@ body
 <?php
 get_footer();
 ?>
-<a href="<?php get_home_url(); ?> /box/wp-admin">WordPress Login</a>

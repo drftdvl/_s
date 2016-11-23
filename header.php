@@ -55,7 +55,7 @@
 	</header>
 -->
 
-	<?php if (is_home()): ?>
+	<?php if (is_home() || is_page_template('about.php')){ ?>
 	<div id="content" class="site-content">
 	<!-- <div class="container"> -->
 	<div class="navbar-fixed">
@@ -72,7 +72,7 @@
 			</div>
 		</nav>
 	</div>
-	<?php else: ?>
+	<?php }else{ ?>
 	<div id="content" class="site-content">
 	<!-- <div class="container"> -->
 	<div class="navbar-fixed">
@@ -89,5 +89,5 @@
 			</div>
 		</nav>
 	</div>
-	<?php endif; ?>
+	<?php } ?>
 	<!-- </div> -->
