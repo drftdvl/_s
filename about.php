@@ -30,25 +30,19 @@
 }
 
 body {
-    background-image: url("/box/wp-content/themes/_s/2.jpg");
-	background-position: top;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
- 
+    background-image: url("/box/wp-content/themes/_s/1.jpg"); 
 }
 
 h1
 {
-	Margin-top:50px;
-	border-style: hidden hidden solid hidden;
-	border-width:6px;
-	border-color:#660066;
+	Margin-top:100px;
 	width: 600px;
 	font-family: PlayFairBlackItalic;
 	text-align: center;
 	font-size: 55px;
 	padding-bottom: 10px;
-	margin-bottom:-10px;
+	margin-bottom:10px;
+	color: white;
 }
 
 .pFirst
@@ -66,9 +60,9 @@ h1
 .aboutParagraph
 {
 	font-family:Aleo-Regular;
-	font-size: 20px;
-	margin-bottom:200px;
-	
+	font-size: 16px;
+	margin-bottom:auto;
+	color: white;
 }
 
 .border
@@ -85,21 +79,18 @@ h1
 	
 </head>
 <body>
-
-
-		<center>
-	
+	<center>
 		<h1>About us</h1>
-			<div class = "border">
+		<div class="container">
+			<div class="card-panel black" style="opacity: 0.5; margin-top: 0px; height:100%;">
 				<p class="aboutParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 			</div>
-		
-
+		</div>
 	</center>
 
 </body>
 
 </html>
 <?php
-get_footer();
+	get_footer();
 ?>

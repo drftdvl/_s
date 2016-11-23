@@ -140,7 +140,7 @@ function my_ajaxurl() {
 
 add_action('wp_ajax_update_user', 'update_user_ajax');
 function update_user_ajax(){
-	$id = $_POST['id'];
+	$id_number = $_POST['id_number'];
 	$bscp = $_POST['bscp'];
 	$fp = $_POST['fp'];
 	$ap = $_POST['ap'];
@@ -150,14 +150,20 @@ function update_user_ajax(){
 	$first_name = $_POST['first_name'];
 	$last_name = $_POST['last_name'];
 	$nickname = $_POST['nickname'];
-	$user = get_user_by('login', $id);
+	$course = $_POST['course'];
+	$ga = $_POST['ga'];
+	$user = get_user_by('login', $id_number);
 	if ($user == false){
 		$userdata = array(
-		    'user_login'  =>  $id,
+		    'user_login'  =>  $id_number,
 		    'user_email'    =>  $email,
-		    'user_pass'   =>  $id,  // When creating an user, `user_pass` is expected.
+		    'user_pass'   =>  $id_number,  // When creating an user, `user_pass` is expected.
 			'first_name' => $first_name,
-			'last_name' => $last_name
+			'last_name' => $last_name,
+			'course' => $course,
+			'id_number' => $id_number,
+			'core' => $core,
+			'ga' => $ga
 		);
 		wp_insert_user( $userdata );
 
@@ -204,7 +210,19 @@ function update_user_ajax(){
 			add_user_meta($user->ID, 'last_name', $last_name, true);
 		} 
 		else {
-			update_user_meta($user->ID, 'last_name', $last_name);
+			update_user_meta($user->ID, 'last_name', $last_name	);
+		}
+		if (get_user_meta($user->ID, 'course', true) == ''){
+			add_user_meta($user->ID, 'course', $course, true);
+		} 
+		else {
+			update_user_meta($user->ID, 'course', $course);
+		}
+		if (get_user_meta($user->ID, 'ga', true) == ''){
+			add_user_meta($user->ID, 'ga', $ga, true);
+		} 
+		else {
+			update_user_meta($user->ID, 'ga', $ga);
 		}
 	}
 	die();

@@ -111,11 +111,12 @@ h1
 			var percentage = current/num;
 			for (user in users){
 				jQuery('#alert').text=('Updated ' + current + ' users');
-				var query = "action=update_user&id=" + users[user]['id'] + "&bscp=" + 
+				var query = "action=update_user&id_number=" + users[user]["id_number"] + "&bscp=" + 
 			        users[user]["bscp"] + "&ap=" +  users[user]["ap"] +
 			       "&fp=" +  users[user]["fp"] + "&tdw=" + 
 			        users[user]["tdw"] + "&core=" +  users[user]["core"] + "&first_name=" +
-			        users[user]["first_name"] + "&last_name=" + users[user]["last_name"] + "&email=" + users[user]["email"] + "&nickname=" + users[user]['nickname'];
+			        users[user]["first_name"] + "&last_name=" + users[user]["last_name"] + "&email=" + users[user]["email"] + 
+			        "&nickname=" + users[user]["nickname"] + "&course=" + users[user]["course"] + "&ga=" + users[user]["ga"];
 			        console.log(query);
 				jQuery.ajax({
 			       type: "POST",
@@ -138,6 +139,41 @@ h1
 		})
 	</script>
 	
+	<?php 
+		global $curent_user;
+		get_currentuserinfo();
+	?>
+
+	<?php
+		$status = 0;
+		if ($ga == 'n'){
+			$status = 0;
+		} 
+		elseif ($ga == 'y' && $bscp >= 3 && $ap >= 3 && $fp >= 3 && $tdw >= 2 && $core >= 2){
+			$status = 3;
+		}
+		elseif ($ga == 'y' && $bscp >= 2 && $ap >= 2 && $fp >= 2 && $tdw >= 1 && $core >= 2){
+			$status = 2;
+		}
+		elseif ($ga == 'y' && $bscp >= 1 && $ap >= 1 && $fp >= 1 && $tdw >= 0 && $core >= 1){
+			$status = 1;
+		}
+		elseif ($ga == 'y' && $bscp >= 0 && $ap >= 0 && $fp >= 0 && $tdw >= 0 && $core >= 0){
+			$status = 0;
+		}
+	?>
+
+	<p>Name: <?php echo $current_user->first_name . " "; echo $current_user->last_name; ?></p>
+	<p>ID Number: <?php echo $current_user->user_login; ?></P>
+	<p>Course: <?php echo $current_user->course; ?></p>
+	<p>BSCP: <?php echo $current_user->bscp; ?></p>
+	<p>AP: <?php echo $current_user->ap; ?></p>
+	<p>FP: <?php echo $current_user->fp; ?></p>
+	<p>TDW: <?php echo $current_user->tdw; ?></p>
+	<p>Core Team: <?php echo $current_user->core; ?></p>
+	<p>GA: <?php echo $current_user->ga; ?></p>
+	<p>Status: <?php echo $status ?></p>
+
 </body>
 
 </html>
