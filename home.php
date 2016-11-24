@@ -82,6 +82,6 @@ body
             
 	</center>
 </body>
-<?php
+<?php 
 get_footer();
 ?>

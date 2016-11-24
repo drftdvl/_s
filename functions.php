@@ -233,6 +233,13 @@ function update_user_ajax(){
 	die();
 }
 
+function bs_hide_admin_bar() {
+    if (!current_user_can('administrator') && !is_admin()) {
+        show_admin_bar(false);
+    }
+}
+add_action('after_setup_theme', 'bs_hide_admin_bar');
+
 /**
  * Implement the Custom Header feature.
  */
