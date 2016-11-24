@@ -55,7 +55,7 @@
 	</header>
 -->
 
-	<?php if (is_home() || is_page_template('about.php')){ ?>
+	<?php if (is_page_template('home.php') || is_page_template('about.php')){ ?>
 	<div id="content" class="site-content">
 	<!-- <div class="container"> -->
 	<div class="navbar-fixed">
@@ -67,6 +67,11 @@
 				      	<li><a href="<?php get_home_url(); ?> /box/about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
 				      	<li><a href="<?php get_home_url(); ?> /box/feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
 				      	<li><a href="<?php get_home_url(); ?> /box/tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
+				      	<?php if (is_user_logged_in()) : ?>
+						    <li><a href="<?php echo wp_logout_url(home_url()); ?>" style="color: #ffffff; font-family: Aleo">LOGOUT</a></li>
+						<?php else : ?>
+						    <li><a href="<?php echo wp_login_url(home_url()); ?>" style="color: #ffffff; font-family: Aleo">LOGIN</a></li>
+						<?php endif;?>
 				      </ul>
 			    </div>
 			</div>
@@ -75,7 +80,6 @@
 	<?php }else{ ?>
 	<div id="content" class="site-content">
 	<!-- <div class="container"> -->
-	<div class="navbar-fixed">
 		<nav class="transparent">
 			<div class="brand-logo center">
 			    <div class="nav-wrapper">
@@ -84,10 +88,10 @@
 				      	<li><a href="<?php get_home_url(); ?> /box/about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
 				      	<li><a href="<?php get_home_url(); ?> /box/feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
 				      	<li><a href="<?php get_home_url(); ?> /box/tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
+				      	<li><a href="<?php echo wp_login_url( home_url() ); ?>" title="Login" style="color: #ffffff; font-family: Aleo">LOGIN</a></li>
 				      </ul>
 			    </div>
 			</div>
 		</nav>
-	</div>
 	<?php } ?>
 	<!-- </div> -->

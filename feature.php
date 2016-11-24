@@ -23,6 +23,12 @@
 	src: url('/box/wp-content/themes/_s/fonts/Quicksand-regular.otf');
 }
 
+body
+{
+	background-image: url("/box/wp-content/themes/_s/1.jpg");
+	background-attachment: fixed;
+}
+
 h1
 {
 	Margin-top:100px;
@@ -40,6 +46,7 @@ h1
 .pFirst
 {
 	border-style: solid;
+	border-color: #4f0b7c;
 	width : 430px;
 	font-family: QuickSandBold;
 	color: white;
@@ -47,6 +54,7 @@ h1
 	text-align:center;
 	background: #4f0b7c;
 	margin-bottom:10px;
+	margin-top:-20px;
 }
 
 .pMember
@@ -54,19 +62,22 @@ h1
 	font-family:QuickSandRegular;
 	margin-bottom:-15px;
 }
+
 </style>
 <head>
 </head>
 <body>
 
 	<center>
-	
-	<h1>feature</h1>
-		<p class = "pFirst">BOX MEMBER OF THE MONTH</p>
-		<img src="1.jpg" alt="Member" style="width:280px;height:270px;">
-		<p class= "pMember">John Smith</p>
-		<p class = "pMember">3 BS Life Sciences</p>
-
+		<div class="card-panel white" style="opacity: 0.5; margin: 0px;">
+			<h1>feature</h1>
+		</div>
+		<div class="card-panel white" style="margin-top: 0px; min-height:100%;">
+			<p class = "pFirst">BOX MEMBER OF THE MONTH</p>
+			<img src="/box/wp-content/themes/_s/avatar.png" alt="Member" style="width:280px;height:270px;">
+			<p class= "pMember">John Smith</p>
+			<p class = "pMember">3 BS Life Sciences</p>
+		</div>
 	</center>
 
 </body>

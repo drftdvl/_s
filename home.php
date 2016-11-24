@@ -31,7 +31,7 @@
 
 body
 {
-	background-image: url("/box/wp-content/themes/_s/1.jpg")
+	background-image: url("/box/wp-content/themes/_s/1.jpg");
 }
 
 .bioOrg
