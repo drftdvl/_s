@@ -59,7 +59,7 @@
 	<div id="content" class="site-content">
 	<!-- <div class="container"> -->
 	<div class="navbar-fixed">
-		<nav class="black" style="opacity: 0.5;">
+		<nav class="transparent">
 			<div class="brand-logo center">
 			    <div class="nav-wrapper">
 				      <ul id="nav-mobile" class="center hide-on-med-and-down">

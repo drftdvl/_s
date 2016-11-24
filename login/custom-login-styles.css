@@ -1,0 +1,22 @@
+body.login {
+  background-image: url('1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.login h1 a {
+  background-image: url('BOxLogoW.png');
+  background-size: 240px 130px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 130px;
+  width: 240px;
+}
+
+p#nav {
+  display: none;
+}
+
+p#backtoblog {
+  display: none;
+}
