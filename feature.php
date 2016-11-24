@@ -63,6 +63,10 @@ h1
 	margin-bottom:-15px;
 }
 
+function resize() {
+    $("#panel").height($(document).height() - $('#panel').height());
+}
+
 </style>
 <head>
 </head>
@@ -72,9 +76,9 @@ h1
 		<div class="card-panel white" style="opacity: 0.5; margin: 0px;">
 			<h1>feature</h1>
 		</div>
-		<div class="card-panel white" style="margin-top: 0px; min-height:100%;">
+		<div class="card-panel white" id="panel" style="margin-top: 0px; margin-bottom:0px; height: 100%;">
 			<p class = "pFirst">BOX MEMBER OF THE MONTH</p>
-			<img src="/box/wp-content/themes/_s/avatar.png" alt="Member" style="width:280px;height:270px;">
+
 			<p class= "pMember">John Smith</p>
 			<p class = "pMember">3 BS Life Sciences</p>
 		</div>

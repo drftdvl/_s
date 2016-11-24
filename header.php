@@ -88,7 +88,11 @@
 				      	<li><a href="<?php get_home_url(); ?> /box/about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
 				      	<li><a href="<?php get_home_url(); ?> /box/feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
 				      	<li><a href="<?php get_home_url(); ?> /box/tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
-				      	<li><a href="<?php echo wp_login_url( home_url() ); ?>" title="Login" style="color: #ffffff; font-family: Aleo">LOGIN</a></li>
+				      	<?php if (is_user_logged_in()) : ?>
+						    <li><a href="<?php echo wp_logout_url(home_url()); ?>" style="color: #ffffff; font-family: Aleo">LOGOUT</a></li>
+						<?php else : ?>
+						    <li><a href="<?php echo wp_login_url(home_url()); ?>" style="color: #ffffff; font-family: Aleo">LOGIN</a></li>
+						<?php endif;?>
 				      </ul>
 			    </div>
 			</div>
