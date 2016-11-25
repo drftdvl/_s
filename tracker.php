@@ -81,10 +81,11 @@ th
 	</p>
 </center>
 	<div class="container">
-
-	<button id="update" class="waves-effect waves-light btn purple darken-4"class="">Update</button>
-
+	<?php 
+	if(current_user_can('administrator')) { ?>
+		<button id="update" class="waves-effect waves-light btn purple darken-4"class="">Update</button>
 		<input type="file" id="fileinput">
+	<?php } ?>
 		<script>
 			var users = [];
 			jQuery(document).ready(function() {
@@ -145,8 +146,6 @@ th
 
 				       success: function(msg){
 				            jQuery('.vehicle-value-box').html(msg+",00€");
-				            
-				            
 				            location.reload();
 				       }
 				});
@@ -165,21 +164,28 @@ th
 		?>
 
 		<?php
-			$status = 0;
+			$status = 'Level N';
+			$ga = $current_user->ga;
+			$core = $current_user->core;
+			$tdw = $current_user->tdw;
+			$fp = $current_user->fp;
+			$ap = $current_user->ap;
+			$bscp = $current_user->bscp;
+
 			if ($ga == 'n'){
-				$status = 0;
+				$status = 'Level 0';
 			} 
 			elseif ($ga == 'y' && $bscp >= 3 && $ap >= 3 && $fp >= 3 && $tdw >= 2 && $core >= 2){
-				$status = 3;
+				$status = 'Level 3';
 			}
 			elseif ($ga == 'y' && $bscp >= 2 && $ap >= 2 && $fp >= 2 && $tdw >= 1 && $core >= 2){
-				$status = 2;
+				$status = 'Level 2';
 			}
 			elseif ($ga == 'y' && $bscp >= 1 && $ap >= 1 && $fp >= 1 && $tdw >= 0 && $core >= 1){
-				$status = 1;
+				$status = 'Level 1';
 			}
 			elseif ($ga == 'y' && $bscp >= 0 && $ap >= 0 && $fp >= 0 && $tdw >= 0 && $core >= 0){
-				$status = 0;
+				$status = 'Level 0';
 			}
 		?>
 
@@ -187,7 +193,7 @@ th
 			<p style="font-family: QuickSandBold;">Name: <?php echo $current_user->first_name . " "; echo $current_user->last_name; ?><br>
 			<!-- ID Number: <?php echo $current_user->user_login; ?><br> -->
 			Course: <?php echo $current_user->course; ?><br>
-			Status: <?php echo $status ?></p>
+			Status: <?php echo $status; ?></p>
 
 			<table class="responsive-table centered">
 		        <thead class="purple darken-4">

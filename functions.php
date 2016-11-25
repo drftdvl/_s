@@ -165,7 +165,7 @@ function update_user_ajax(){
 			'core' => $core,
 			'ga' => $ga,
 			'bscp' => $bscp,
-			'fp' => $ap,
+			'fp' => $fp,
 			'ap' => $ap,
 			'tdw' => $tdw,
 			'email' => $email
