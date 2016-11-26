@@ -172,19 +172,19 @@ th
 			$ap = $current_user->ap;
 			$bscp = $current_user->bscp;
 
-			if ($ga == 'n'){
+			if ($ga == 'N'){
 				$status = 'Level 0';
 			} 
-			elseif ($ga == 'y' && $bscp >= 3 && $ap >= 3 && $fp >= 3 && $tdw >= 2 && $core >= 2){
+			elseif ($ga == 'Y' && $bscp >= 3 && $ap >= 3 && $fp >= 3 && $tdw >= 2 && $core >= 2){
 				$status = 'Level 3';
 			}
-			elseif ($ga == 'y' && $bscp >= 2 && $ap >= 2 && $fp >= 2 && $tdw >= 1 && $core >= 2){
+			elseif ($ga == 'Y' && $bscp >= 2 && $ap >= 2 && $fp >= 2 && $tdw >= 1 && $core >= 2){
 				$status = 'Level 2';
 			}
-			elseif ($ga == 'y' && $bscp >= 1 && $ap >= 1 && $fp >= 1 && $tdw >= 0 && $core >= 1){
+			elseif ($ga == 'Y' && $bscp >= 1 && $ap >= 1 && $fp >= 1 && $tdw >= 0 && $core >= 1){
 				$status = 'Level 1';
 			}
-			elseif ($ga == 'y' && $bscp >= 0 && $ap >= 0 && $fp >= 0 && $tdw >= 0 && $core >= 0){
+			elseif ($ga == 'Y' && $bscp >= 0 && $ap >= 0 && $fp >= 0 && $tdw >= 0 && $core >= 0){
 				$status = 'Level 0';
 			}
 		?>
