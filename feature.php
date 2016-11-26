@@ -8,24 +8,24 @@
 @font-face
 {
 	font-family: PlayFairBlackItalic;
-	src: url('/box/wp-content/themes/_s/fonts/PlayFairDisplay-BlackItalic.otf');
+	src: url('<?php home_url();?>/wp-content/themes/_s/fonts/PlayfairDisplay-BlackItalic.otf');
 }
 
 @font-face
 {
 	font-family: QuickSandBold;
-	src: url('/box/wp-content/themes/_s/fonts/Quicksand-Bold.otf');
+	src: url('<?php home_url();?>/wp-content/themes/_s/fonts/Quicksand-Bold.otf');
 }
 
 @font-face
 {
 	font-family:QuickSandRegular;
-	src: url('/box/wp-content/themes/_s/fonts/Quicksand-regular.otf');
+	src: url('<?php home_url();?>/wp-content/themes/_s/fonts/Quicksand-Regular.otf');
 }
 
 body
 {
-	background-image: url("/box/wp-content/themes/_s/1.jpg");
+	background-image: url("<?php home_url();?>/wp-content/themes/_s/1.jpg");
 	background-attachment: fixed;
 }
 
@@ -78,7 +78,7 @@ function resize() {
 		</div>
 		<div class="card-panel white" id="panel" style="margin-top: 0px; margin-bottom:0px; height: 100%;">
 			<p class = "pFirst">BOx MEMBER OF THE MONTH</p>
-			<img src="/box/wp-content/themes/_s/avatar.png" alt="Member" style="width:280px;height:270px;">
+			<img src="<?php home_url();?>/wp-content/themes/_s/avatar.png" alt="Member" style="width:280px;height:270px;">
 			<p class= "pMember">John Smith</p>
 			<p class = "pMember">3 BS Life Sciences</p>
 		</div>

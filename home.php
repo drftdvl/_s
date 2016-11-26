@@ -9,29 +9,29 @@
 @font-face
 {
 	font-family: PlayFairBlackItalic;
-	src: url('/box/wp-content/themes/_s/fonts/PlayFairDisplay-BlackItalic.otf');
+	src: url('<?php home_url();?>/wp-content/themes/_s/fonts/PlayfairDisplay-BlackItalic.otf');
 }
 
 @font-face
 {
 	font-family: QuickSandBold;
-	src: url('/box/wp-content/themes/_s/fonts/Quicksand-Bold.otf');
+	src: url('<?php home_url();?>/wp-content/themes/_s/fonts/Quicksand-Bold.otf');
 }
 
 @font-face
 {
 	font-family:QuickSandRegular;
-	src: url('/box/wp-content/themes/_s/fonts/Quicksand-regular.otf');
+	src: url('<?php home_url();?>/wp-content/themes/_s/fonts/Quicksand-Regular.otf');
 }
 @font-face
 {
 	font-family:Aleo-Regular;
-	src: url('/box/wp-content/themes/_s/fonts/Aleo-Regular.otf');
+	src: url('<?php home_url();?>/wp-content/themes/_s/fonts/Aleo-Regular.otf');
 }
 
 body
 {
-	background-image: url("/box/wp-content/themes/_s/1.jpg");
+	background-image: url("<?php home_url();?>/wp-content/themes/_s/1.jpg");
 }
 
 .bioOrg
@@ -64,7 +64,7 @@ body
 <body>
 	<center>
 	<div>
-			<img src="/box/wp-content/themes/_s/BOx.Logo.W.png" alt = "Ateneo BOx:eXplore. eXperience. eXcel" style="width:240px;height:130px;margin-top:10px;padding-bottom: 0px;">
+			<img src="<?php home_url();?>/wp-content/themes/_s/BOx.Logo.W.png" alt = "Ateneo BOx:eXplore. eXperience. eXcel" style="width:240px;height:130px;margin-top:10px;padding-bottom: 0px;">
 			<br>
 			<strong class = "bioOrg">Ateneo Biological Organization</strong>
 			<br>
