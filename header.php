@@ -24,7 +24,7 @@
 {
 	font-family: Aleo;
 	font-size: 23px;
-	src: url('/box/wp-content/themes/_s/fonts/Aleo-Regular.otf');
+	src: url('<?php get_home_url(); ?>/box/wp-content/themes/_s/fonts/Aleo-Regular.otf');
 }
 </style>
 
@@ -63,10 +63,10 @@
 			<div class="brand-logo center">
 			    <div class="nav-wrapper">
 				      <ul id="nav-mobile" class="center hide-on-med-and-down">
-				      	<li><a href="<?php get_home_url(); ?> /" style="color: #ffffff; font-family: Aleo">HOME</a></li>
-				      	<li><a href="<?php get_home_url(); ?> /about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
-				      	<li><a href="<?php get_home_url(); ?> /feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
-				      	<li><a href="<?php get_home_url(); ?> /tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
+				      	<li><a href="<?php get_home_url(); ?> box/" style="color: #ffffff; font-family: Aleo">HOME</a></li>
+				      	<li><a href="<?php get_home_url(); ?> box/about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
+				      	<li><a href="<?php get_home_url(); ?> box/feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
+				      	<li><a href="<?php get_home_url(); ?> box/tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
 				      	<?php if (is_user_logged_in()) : ?>
 						    <li><a href="<?php echo wp_logout_url(home_url()); ?>" style="color: #ffffff; font-family: Aleo">LOGOUT</a></li>
 						<?php else : ?>
@@ -84,10 +84,10 @@
 			<div class="brand-logo center">
 			    <div class="nav-wrapper">
 				      <ul id="nav-mobile" class="center hide-on-med-and-down">
-				      	<li><a href="<?php get_home_url(); ?> /" style="color: #ffffff; font-family: Aleo">HOME</a></li>
-				      	<li><a href="<?php get_home_url(); ?> /box/about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
-				      	<li><a href="<?php get_home_url(); ?> /box/feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
-				      	<li><a href="<?php get_home_url(); ?> /box/tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
+				      	<li><a href="<?php get_home_url(); ?> box/" style="color: #ffffff; font-family: Aleo">HOME</a></li>
+				      	<li><a href="<?php get_home_url(); ?> box/about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
+				      	<li><a href="<?php get_home_url(); ?> box/feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
+				      	<li><a href="<?php get_home_url(); ?> box/tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
 				      	<?php if (is_user_logged_in()) : ?>
 						    <li><a href="<?php echo wp_logout_url(home_url()); ?>" style="color: #ffffff; font-family: Aleo">LOGOUT</a></li>
 						<?php else : ?>
