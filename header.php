@@ -63,7 +63,7 @@
 			<div class="brand-logo center">
 			    <div class="nav-wrapper">
 				      <ul id="nav-mobile" class="center hide-on-med-and-down">
-				      	<li><a href="<?php get_home_url(); ?> " style="color: #ffffff; font-family: Aleo">HOME</a></li>
+				      	<li><a href="<?php get_home_url(); ?> /" style="color: #ffffff; font-family: Aleo">HOME</a></li>
 				      	<li><a href="<?php get_home_url(); ?> /about" style="color: #ffffff; font-family: Aleo">ABOUT US</a></li>
 				      	<li><a href="<?php get_home_url(); ?> /feature" style="color: #ffffff; font-family: Aleo">FEATURE</a></li>
 				      	<li><a href="<?php get_home_url(); ?> /tracker" style="color: #ffffff; font-family: Aleo">TRACKER</a></li>
