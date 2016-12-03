@@ -8,24 +8,24 @@
 @font-face
 {
 	font-family: PlayFairBlackItalic;
-	src: url('/box/wp-content/themes/_s/fonts/PlayfairDisplay-BlackItalic.otf');
+	src: url('<?php home_url();?>/wp-content/themes/_s/fonts/PlayfairDisplay-BlackItalic.otf');
 }
 
 @font-face
 {
 	font-family: QuickSandBold;
-	src: url('/box/wp-content/themes/_s/fonts/Quicksand-Bold.otf');
+	src: url('<?php home_url();?>/wp-content/themes/_s/fonts/Quicksand-Bold.otf');
 }
 
 @font-face
 {
 	font-family:QuickSandRegular;
-	src: url('/box/wp-content/themes/_s/fonts/Quicksand-Regular.otf');
+	src: url('<?php home_url();?>/wp-content/themes/_s/fonts/Quicksand-Regular.otf');
 }
 
 body
 {
-	background-image: url("/box/wp-content/themes/_s/1.jpg");
+	background-image: url("<?php home_url();?>/wp-content/themes/_s/1.jpg");
 	background-attachment: fixed;
 }
 
@@ -89,7 +89,7 @@ function resize() {
 				<?php }
 				else
 				{ ?>
-					<img src="/box/wp-content/themes/_s/avatar.png" alt="Member" style="width:300px; height:300px;">
+					<img src="<?php home_url();?>/wp-content/themes/_s/avatar.png" alt="Member" style="width:300px; height:300px;">
 				<?php } ?>
 					<div class = "pMember"><?php the_title(); ?></div>
 					<div class = "pMember"><?php the_content(); ?></div>
