@@ -79,8 +79,15 @@ function resize() {
 		<div class="card-panel white" id="panel" style="margin-top: 0px; margin-bottom:0px; height: 100%;">
 			<p class = "pFirst">BOx MEMBER OF THE MONTH</p>
 			<img src="/box/wp-content/themes/_s/avatar.png" alt="Member" style="width:280px;height:270px;">
-			<p class= "pMember">John Smith</p>
-			<p class = "pMember">3 BS Life Sciences</p>
+
+			<?php
+			$args = array( 'numberposts' => 1 );
+			$lastposts = get_posts( $args );
+			foreach($lastposts as $post) : setup_postdata($post); ?>
+				<p class = "pMember"><?php the_title(); ?></p>
+				<p class = "pMember"><?php the_content(); ?></p>
+			<?php endforeach; ?>
+
 		</div>
 	</center>
 
