@@ -78,14 +78,21 @@ function resize() {
 		</div>
 		<div class="card-panel white" id="panel" style="margin-top: 0px; margin-bottom:0px; height: 100%;">
 			<p class = "pFirst">BOx MEMBER OF THE MONTH</p>
-			<img src="/box/wp-content/themes/_s/avatar.png" alt="Member" style="width:280px;height:270px;">
 
 			<?php
-			$args = array( 'numberposts' => 1 );
-			$lastposts = get_posts( $args );
-			foreach($lastposts as $post) : setup_postdata($post); ?>
-				<p class = "pMember"><?php the_title(); ?></p>
-				<p class = "pMember"><?php the_content(); ?></p>
+				$args = array( 'numberposts' => 1 );
+				$lastposts = get_posts( $args );
+				foreach($lastposts as $post) : setup_postdata($post); ?>
+				<?php if ( has_post_thumbnail() ) 
+				{ ?>
+					<img src="<?php the_post_thumbnail_url('medium') ?>">
+				<?php }
+				else
+				{ ?>
+					<img src="/box/wp-content/themes/_s/avatar.png" alt="Member" style="width:300px; height:300px;">
+				<?php } ?>
+					<div class = "pMember"><?php the_title(); ?></div>
+					<div class = "pMember"><?php the_content(); ?></div>
 			<?php endforeach; ?>
 
 		</div>
